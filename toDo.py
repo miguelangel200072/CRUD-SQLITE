@@ -40,8 +40,15 @@ class ToDo:
         id = input('Introduzca el id de la tarea que desea eliminar: ')
         self.c.execute('DELETE FROM task WHERE id = ?', (id,))
         self.conexion.commit()
+    
+    
+    def update_deadline_task(self):
+        id = input('Introduce el id de la tarea que desea actualizar: ')
+        deadline = input('Introduzca la nueva fecha: ')
+        self.c.execute('UPDATE task SET deadline = ? WHERE id = ?', (deadline, id))
 todo = ToDo()
 # todo.add_task()
 todo.show_task()
-todo.delete_task()
+# todo.delete_task()
+todo.update_deadline_task()
 todo.show_task()
