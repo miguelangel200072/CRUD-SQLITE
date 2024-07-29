@@ -18,7 +18,7 @@ class ToDo:
     # Método encargado de añadir tareas nuevas a la base de datos.
     def add_task(self):
         name = input('\nIntroduzca el nombre de la tarea: ')
-        deadline = input('Introduzca la fecha límite (YYYY-MM-DD): ')
+        deadline = input('Introduzca la fecha límite (DD-MM-YYYY): ')
         self.c.execute('INSERT INTO task (name, deadline) VALUES (?,?)', (name, deadline))
         self.conexion.commit()
         print("\nTarea añadida con éxito\n")
@@ -65,7 +65,7 @@ class ToDo:
             return
 
         new_name = input('Introduzca el nuevo nombre de la tarea: ')
-        new_deadline = input('Introduzca la nueva fecha límite (YYYY-MM-DD): ')
+        new_deadline = input('Introduzca la nueva fecha límite (DD-MM-YYYY): ')
         self.c.execute('UPDATE task SET name = ?, deadline = ? WHERE id = ?', (new_name, new_deadline, id))
         self.conexion.commit()
         print("\nTarea actualizada con éxito\n")
