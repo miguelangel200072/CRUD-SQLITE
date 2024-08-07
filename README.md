@@ -19,13 +19,13 @@ Para comenzar a utilizar la aplicación **ToDo List Manager**, sigue estos pasos
 
 ### Instalación
 
-1. **Clona el repositorio**: Clona el repositorio a tu máquina local usando Git:
+1. Clona el repositorio a tu máquina local:
     ```bash
-    git clone https://github.com/tuusuario/todo-list-manager.git
+    git clone https://github.com/miguelangel200072/CRUD-SQLITE.git
     ```
-2. **Navega al directorio del proyecto**: Accede al directorio del proyecto que acabas de clonar:
+2. Navega al directorio del proyecto:
     ```bash
-    cd todo-list-manager
+    cd CRUD-SQLITE
     ```
 
 ### Requisitos
